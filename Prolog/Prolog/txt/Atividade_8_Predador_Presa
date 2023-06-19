@@ -1,0 +1,20 @@
+animal(rato).
+animal(serpente).
+animal(lobo).
+animal(onça).
+animal(gaviao).
+
+predador(rato,frutinha).
+predador(serpente,rato).
+predador(lobo,serpente).
+predador(gaviao,serpente).
+predador(onça,lobo).
+
+
+presa(frutinha,rato).
+presa(rato,serpente).
+presa(serpente,lobo).
+presa(lobo,onça).
+presa(serpente,gaviao).
+
+predador_do_predador(A,C) :- predador(C,B), predador(B,A).

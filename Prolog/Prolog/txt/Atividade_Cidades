@@ -1,0 +1,81 @@
+% Todas as cidades do Brasil com seus tamanhos
+cidade(itapetinga, pequena, ba, nordeste).
+cidade(salvador, grande, ba, nordeste).
+cidade(recife, media, pe, nordeste).
+cidade(belem, grande, pa, norte).             
+cidade(manaus, media, am, norte).
+cidade(campo_grande, grande, ms, centro_oeste).		
+cidade(trindade, media, go, centro_oeste).
+cidade(rio, grande, rj, sudeste).				
+cidade(sampas_city, grande, sp, sudeste).
+cidade(curitiba, grande, pr, sul).			
+cidade(londrina, pequena, pr, sul).
+
+% Todas as capitais do Brasil
+capital(aracaju,media, nordeste).			
+capital(maceio,pequena, nordeste).
+capital(salvador,grande, nordeste).
+capital(fortaleza,grande, nordeste).
+capital(saoluis,media, nordeste).
+capital(joaopessoa,media, nordeste).
+capital(natal,pequena, nordeste).
+capital(recife,grande, nordeste).
+capital(teresina,media, nordeste).
+capital(belem,grande, norte).     
+capital(campo_grande,media, centro_oeste).	
+capital(rio,grande, sudeste).
+capital(curitiba,grande, sul).
+
+capital(ba, salvador).
+capital(pe, recife).
+capital(pa, belem).
+capital(am, manaus).
+capital(ms, campo_grande).
+capital(go, goiania).
+capital(rj, rio).
+capital(sp, sao_paulo).
+capital(pr, curitiba).
+
+% Todos os estados e suas siglas
+estado(ba, bahia, nordeste).
+estado(pe, pernambuco, nordeste).
+estado(pa, para, norte).
+estado(am, amazonas, norte).
+estado(ms, mato_grosso_do_sul, centro_oeste).
+estado(go, goias, centro_oeste).
+estado(rj, rio, sudeste).
+estado(sp, sao_paulo, sudeste).
+estado(pr, parana, sul).
+
+% Relação de cada cidade com o seu respectivo estado
+pertence(itapetinga, ba).
+pertence(salvador, ba).
+pertence(recife, pe).
+pertence(belem, pa).
+pertence(manaus, am).
+pertence(campo_grande, ms).
+pertence(trindade, go).
+pertence(rio, rj).
+pertence(sampas_city, sp).
+pertence(curitiba, pr).
+pertence(londrina, pr).
+
+% Regiões
+regiao(nordeste, [bahia, pernambuco]).
+regiao(norte, [para, amazonas]).
+regiao(centro_oeste, [mato_grosso_do_sul, goias]).
+regiao(sudeste, [rio, sao_paulo]).
+regiao(sul, [parana]).
+
+% Cidades por região
+cidade_regiao(nordeste, [itapetinga, salvador, recife]).
+cidade_regiao(norte, [belem, manaus]).
+cidade_regiao(centro_oeste, [campo_grande, trindade]).
+cidade_regiao(sudeste, [rio, sampas_city]).
+cidade_regiao(sul, [curitiba, londrina]).
+
+% Capitais por região
+capital_regiao(nordeste, [aracaju, maceio, salvador, fortaleza, saoluis, joaopessoa, natal, recife, teresina]).
+capital_regiao(norte, [belem]).
+capital_regiao(centro_oeste, [campo_grande]).
+capital_regiao(sudeste, [rio]).

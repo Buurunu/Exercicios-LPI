@@ -1,0 +1,13 @@
+codigo(1).
+codigo(2).
+codigo(3).
+
+
+msg1(integer_overflow).
+msg2(divisão_por_zero).
+msg3(id_desconhecido).
+
+
+traduza(1,M) :- codigo(1),msg1(M).
+traduza(2,M) :- codigo(2),msg2(M).
+traduza(3,M) :- codigo(3),msg3(M).

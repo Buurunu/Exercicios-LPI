@@ -1,0 +1,29 @@
+progenitor(maria,jose).
+progenitor(joao,jose).
+progenitor(joao,ana).
+progenitor(jose,julia).
+progenitor(jose,iris).
+progenitor(iris,jorge).
+progenitor(ana,bob).
+
+masculino(jose).
+masculino(joao).
+masculino(jorge).
+masculino(bob).
+
+feminino(maria).
+feminino(ana).
+feminino(julia).
+feminino(iris).
+
+avô(X,Neto) :- masculino(X),progenitor(X,Filho),progenitor(Filho,Neto).
+avó(X,Neto) :- feminino(X),progenitor(X,Filho),progenitor(Filho,Neto).
+
+irmao(X,Irm) :- masculino(X),progenitor(Pais,X),progenitor(Pais,Irm),X\==Irm.
+irma(X,Irm) :- feminino(X),progenitor(Pais,X),progenitor(Pais,Irm),X\==Irm.
+
+tio(X,Sobrinho) :- irmao(X,Irm),progenitor(Irm,Sobrinho).
+tia(X,Sobrinho) :- irma(X,Irm),progenitor(Irm,Sobrinho).
+
+primo(X,Prim) :- irmao(Pai,Tia),progenitor(Pai,X),progenitor(Tia,Prim),X\==Prim.
+prima(X,Prim) :- irma(Pai,Tia),progenitor(Pai,X),progenitor(Tia,Prim),X\==Prim.

@@ -1,0 +1,25 @@
+:- discontiguous pessoa/3.
+
+comida(peru).
+comida(frango).
+comida(salmao).
+comida(solha).
+
+bebida(cerveja).
+bebida(vinho_verde).
+bebida(vinho_maduro).
+
+pessoa(bruno,frango,vinho_verde).
+pessoa(antonio,salmao,cerveja).
+pessoa(barbara,vinho_maduro,solha,peru).
+pessoa(ana,salmao,vinho_verde).
+
+
+casal(bruno,ana).
+casal(antonio,barbara).
+
+combina(salmao,vinho_maduro).
+combina(frango,cerveja).
+combina(peru,cerveja).
+combina(solha,vinho_verde).
+
